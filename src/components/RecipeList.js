@@ -3,6 +3,12 @@ import './RecipeList.css';
 import { Link } from 'react-router-dom';
 
 const RecipeList = ({ recipes }) => {
+
+    //Conditionally render different template
+    if(recipes.length === 0){
+        return <div className='error'>No recipes to load...</div>
+    }
+
     return(
         <div className='recipe-list'>
             {recipes.map(recipe => (
