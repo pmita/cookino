@@ -10,7 +10,7 @@ const Navbar = () => {
                     <h1>Cooking with Passion</h1>
                 </Link>
                 <Link to='/create'>
-                    + Create a recipe
+                    + Create
                 </Link>
             </nav>
         </div>
