@@ -7,7 +7,6 @@ export const useFetch = (url, method= "GET") => {
   const [options, setOptions] = useState(null)
 
   const postData = (postData) => {
-    //set some fetch options
     setOptions({
       method: "POST",
       headers: {
@@ -24,10 +23,6 @@ export const useFetch = (url, method= "GET") => {
       setIsPending(true)
       
       try {
-        //the options object can also contain
-        //A headers property
-        //The method ,which can be GEt, POST, etc.
-        //And the body we want to send with our request
         const res = await fetch(url, { ...fetchOptions, signal: controller.signal })
         if(!res.ok) {
           throw new Error(res.statusText)

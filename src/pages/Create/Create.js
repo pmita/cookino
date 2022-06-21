@@ -27,7 +27,7 @@ const Create = () => {
 
     const handleAdd = (e) => {
         e.preventDefault();
-        const ing = newIngredient.trim(); //remove any white space the user might have added by accident
+        const ing = newIngredient.trim(); 
         if(ing && !ingredients.includes(ing)){
             setIngredients((prevIngredient) => [...prevIngredient, ing])
         }
