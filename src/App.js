@@ -8,12 +8,14 @@ import Create from './pages/Create/Create';
 import Search from './pages/Search/Search';
 //COMPONENTS
 import Navbar from './components/Navbar';
+import ThemeSelector from './components/ThemeSelector';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Navbar />
+        <ThemeSelector />
         <Routes>
           <Route path='/' exact element={<Home />} />
           <Route path='/create' element={<Create />} />
